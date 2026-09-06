@@ -11,5 +11,7 @@
     @include('partials.pourquoi')
     @include('partials.accompagnements')
     @include('partials.cabinet-digital')
+    @include('partials.avis')
     @include('partials.faq')
+    @include('partials.rendez-vous')
 @endsection

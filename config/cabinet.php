@@ -152,4 +152,62 @@ return [
             'reponse' => "Les honoraires sont fixés à l'avance dans une convention : forfait pour une prestation définie, taux horaire pour un accompagnement, ou abonnement pour un suivi régulier.",
         ],
     ],
+
+    /*
+     | Coordonnées — à remplacer par celles du cabinet avant la mise en ligne.
+     */
+    'contact' => [
+        'telephone' => '01 23 45 67 89',
+        'telephone_lien' => '+33123456789',
+        'email' => 'contact@didonno-avocate.fr',
+        'adresse' => 'Adresse du cabinet, 75000 Paris',
+        'horaires' => 'du Lundi au Vendredi de 9h à 19h',
+        // Lien de réservation en ligne (Calendly, Doctrine, Izy…)
+        'reservation_url' => '#rendez-vous',
+    ],
+
+    /*
+     | Avis clients.
+     |
+     | ATTENTION : les témoignages ci-dessous sont des EXEMPLES de mise en page.
+     | Ils doivent être remplacés par les avis réellement laissés par les
+     | clientes et clients du cabinet — ne jamais publier un avis attribué à
+     | une personne qui ne l'a pas écrit.
+     */
+    'avis' => [
+        'note' => 5,
+        'nombre' => 0,
+        'profil_url' => '#avis-google',
+        'ecrire_url' => '#ecrire-un-avis',
+        'temoignages' => [
+            [
+                'auteur' => 'Exemple à remplacer',
+                'date' => '01/01/2026',
+                'note' => 5,
+                'texte' => "Remplacez ce texte par un avis réellement laissé par un client du cabinet, repris depuis la fiche Google.",
+                'couleur' => '#7b4fa8',
+            ],
+            [
+                'auteur' => 'Exemple à remplacer',
+                'date' => '01/01/2026',
+                'note' => 5,
+                'texte' => "Chaque carte reprend le nom de l'auteur, la date, la note et le début du commentaire, avec un lien « Lire la suite ».",
+                'couleur' => '#0f5c4a',
+            ],
+            [
+                'auteur' => 'Exemple à remplacer',
+                'date' => '01/01/2026',
+                'note' => 5,
+                'texte' => "Vous pouvez en saisir autant que nécessaire : le carrousel s'adapte au nombre d'avis déclarés.",
+                'couleur' => '#3b4443',
+            ],
+            [
+                'auteur' => 'Exemple à remplacer',
+                'date' => '01/01/2026',
+                'note' => 5,
+                'texte' => "L'initiale affichée dans la pastille est déduite automatiquement du nom de l'auteur.",
+                'couleur' => '#b8235a',
+            ],
+        ],
+    ],
 ];

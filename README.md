@@ -28,7 +28,9 @@ resources/views/partials/expertises.blade.php       Section « Mes compétences 
 resources/views/partials/pourquoi.blade.php         Bandeau « Pourquoi choisir … ? »
 resources/views/partials/accompagnements.blade.php  Carrousel des accompagnements
 resources/views/partials/cabinet-digital.blade.php  Section « Cabinet digitalisé et en présentiel »
+resources/views/partials/avis.blade.php             Avis clients (carrousel Google)
 resources/views/partials/faq.blade.php              Questions fréquentes (accordéon <details>)
+resources/views/partials/rendez-vous.blade.php      Prise de rendez-vous et coordonnées
 resources/views/components/icon.blade.php           Pictogrammes SVG (<x-icon name="…" />)
 resources/views/home.blade.php          Page d'accueil
 public/css/site.css                     Compléments CSS (états ouverts du menu)
@@ -76,6 +78,7 @@ retombent sur les placeholders SVG tant que la photo n'est pas fournie
 | `public/images/droit-affaires.jpg` | Illustration « droit des affaires » | JPG/WebP, format 4/3           |
 | `public/images/competences.jpg`  | Photo de la section « Mes compétences » | JPG/WebP, cadrage carré     |
 | `public/images/cabinet-digital.png` | Mockup du site sur ordinateur | PNG/WebP transparent, paysage   |
+| `public/images/rendez-vous.png`  | Mockup + tour Eiffel          | PNG/WebP transparent, paysage          |
 
 Le portrait a deux traitements automatiques :
 
@@ -105,8 +108,20 @@ Le nom, les initiales du logo, le titre et l'accroche sont regroupés dans
 Le même fichier porte tout le contenu éditorial de la page d'accueil :
 `expertises` (sous-menu du header **et** cartes « Mes compétences »),
 `atouts` (« Pourquoi choisir … ? »), `accompagnements` (carrousel),
-`avantages_digital` et `faq`. Ajouter une entrée à l'un de ces tableaux suffit
-à la faire apparaître sur la page.
+`avantages_digital`, `faq`, `avis` et `contact`. Ajouter une entrée à l'un de
+ces tableaux suffit à la faire apparaître sur la page.
+
+### À renseigner avant la mise en ligne
+
+- **`contact`** : téléphone, adresse-mail, adresse postale, horaires et
+  `reservation_url` (lien Calendly, Doctrine, Izy…) sont des valeurs
+  d'exemple. Les trois blocs de coordonnées et tous les boutons
+  « Prendre rendez-vous » les utilisent.
+- **`avis.temoignages`** : les quatre témoignages livrés sont des **exemples de
+  mise en page**. Ils doivent être remplacés par les avis réellement laissés
+  par les clients du cabinet, repris depuis la fiche Google — un avis attribué
+  à une personne qui ne l'a pas écrit est un faux témoignage. Renseignez aussi
+  `avis.nombre`, `avis.profil_url` et `avis.ecrire_url`.
 
 Le tableau `competences` du même fichier alimente **à la fois** le sous-menu
 « Compétences » du header et le bandeau sous la bannière : une entrée ajoutée
@@ -131,4 +146,6 @@ Les entrées du menu et du sous-menu « Compétences » sont des tableaux PHP en
 - Carrousel « Mes différents accompagnements » (défilement tactile + flèches)
 - Section « Cabinet digitalisé et en présentiel » : mockup, avantages et bouton
 - Questions fréquentes en accordéon `<details>` natif, la première ouverte
+- Section « Retour d'expérience de mes clients » : fiche du cabinet et carrousel d'avis Google
+- Section « Prendre rendez-vous » : horaires, bouton de réservation et bloc de coordonnées
 - Responsive (menu burger sous 1024 px) et accessibilité de base (`aria-expanded`, fermeture avec `Échap`)

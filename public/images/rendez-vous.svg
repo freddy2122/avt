@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Illustration provisoire">
+  <g stroke="#c9b48d" stroke-width="4" fill="none">
+    <path d="M150 60v20"/><path d="M132 80h36"/>
+    <path d="M140 80c0 90-22 190-46 250h132c-24-60-46-160-46-250"/>
+    <path d="M112 210h76M92 300h116"/>
+  </g>
+  <g>
+    <path d="M330 130h380v250H330z" fill="#3f2a2a"/>
+    <path d="M344 143h352v224H344z" fill="#6b7a86"/>
+    <rect x="344" y="143" width="352" height="38" fill="#3f2a2a"/>
+    <rect x="376" y="225" width="180" height="18" rx="6" fill="#ffffff" opacity=".9"/>
+    <rect x="376" y="258" width="132" height="12" rx="6" fill="#eee0bd"/>
+    <rect x="376" y="290" width="96" height="24" rx="4" fill="#eee0bd"/>
+    <path d="M280 380h480l36 36H244z" fill="#c8ccd0"/>
+    <rect x="460" y="392" width="120" height="9" rx="5" fill="#9aa1a7"/>
+  </g>
+  <text x="400" y="500" font-family="Georgia, serif" font-size="24" fill="#6b6459" text-anchor="middle">rendez-vous.png — tour Eiffel et mockup</text>
+</svg>

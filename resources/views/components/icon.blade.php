@@ -149,5 +149,20 @@
             <path d="M18 7v29M30 12v29"/>
             @break
 
+
+        @case('telephone')
+            <path d="M16 6h-5a4 4 0 0 0-4 4.3C8 26 22 40 37.7 41A4 4 0 0 0 42 37v-5l-9-4-4 5c-5-2.5-9-6.5-11.5-11.5l5-4z"/>
+            @break
+
+        @case('email')
+            <rect x="4" y="10" width="40" height="28" rx="3"/>
+            <path d="m5 12 19 14 19-14"/>
+            @break
+
+        @case('localisation')
+            <path d="M24 43s14-13.4 14-24A14 14 0 1 0 10 19c0 10.6 14 24 14 24z"/>
+            <circle cx="24" cy="19" r="5.5"/>
+            @break
+
     @endswitch
 </svg>
