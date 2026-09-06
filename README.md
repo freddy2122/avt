@@ -53,14 +53,28 @@ La palette et les polices du cabinet sont déclarées juste en dessous, dans `ta
 
 ## Remplacer les images
 
-Déposer les visuels dans `public/images/` et mettre à jour les deux `src` du hero :
+Il suffit de **déposer les fichiers dans `public/images/`** : les vues détectent
+automatiquement le premier format présent (`.webp`, `.jpg`, `.jpeg`, `.png`) et
+retombent sur les placeholders SVG tant que la photo n'est pas fournie
+(voir `app/Support/SiteImage.php`). Aucune modification des vues n'est nécessaire.
 
-| Fichier                      | Rôle                          | Format conseillé                       |
-|------------------------------|-------------------------------|----------------------------------------|
-| `public/images/hero-bg.svg`  | Photo de fond de la bannière  | JPG/WebP ≥ 1920×1080                   |
-| `public/images/portrait.svg` | Portrait de l'avocat, détouré | PNG/WebP transparent, ~1000 px de haut |
+| Fichier à déposer                | Rôle                          | Format conseillé                       |
+|----------------------------------|-------------------------------|----------------------------------------|
+| `public/images/hero-bg.jpg`      | Photo de fond de la bannière  | JPG/WebP ≥ 1920×1080, paysage          |
+| `public/images/avocate.png`      | Portrait **détouré**          | PNG/WebP transparent, ~1200 px de haut |
+| `public/images/avocate.jpg`      | Portrait **avec son décor**   | JPG/WebP, cadrage portrait 3/4         |
+
+Le portrait a deux traitements automatiques :
+
+- **`avocate.png`** (fond transparent) → affiché tel quel, comme sur le modèle ;
+- **`avocate.jpg` / `.webp`** (photo de studio avec son décor) → présenté dans un
+  cadre arrondi en arche, bordé de crème : élégant sans nécessiter de détourage.
 
 Le logo « DA / AVOCAT » est composé en HTML (texte), aucune image n'est nécessaire.
+
+> **Droits d'utilisation** : une URL de prévisualisation iStock (`media.istockphoto.com`,
+> paramètre `s=612x612`) est une image de comparaison filigranée, réservée à la maquette.
+> Pour la mise en ligne, téléchargez le fichier haute définition depuis la licence achetée.
 
 ## Contenu de la navigation
 
