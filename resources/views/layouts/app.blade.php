@@ -21,6 +21,8 @@
                         'brown-dark': '#33201f',
                         cream: '#eee0bd',
                         'cream-soft': '#f5ecd6',
+                        ink: '#3c3c3b',
+                        gris: '#f0f0ee',
                     },
                     fontFamily: {
                         title: ['"Playfair Display"', 'Georgia', 'serif'],
@@ -33,7 +35,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/site.css') }}">
 </head>
-<body class="font-body antialiased bg-white text-white">
+<body class="font-body antialiased bg-white text-ink">
 
     @include('partials.header')
 

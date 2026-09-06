@@ -6,13 +6,8 @@
         ['label' => 'Contact',    'url' => '#contact'],
     ];
 
-    $competences = [
-        ['label' => 'Droit des sociétés',      'url' => '#'],
-        ['label' => 'Droit commercial',        'url' => '#'],
-        ["label" => "Contrats d'affaires",     'url' => '#'],
-        ['label' => 'Contentieux des affaires','url' => '#'],
-        ['label' => 'Droit du travail',        'url' => '#'],
-    ];
+    // Le sous-menu reprend les compétences déclarées dans config/cabinet.php
+    $competences = config('cabinet.competences');
 @endphp
 
 <header id="header" class="fixed inset-x-0 top-0 z-50 bg-brown">

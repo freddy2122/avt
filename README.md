@@ -21,6 +21,10 @@ routes/web.php                          Route « / » → vue home
 resources/views/layouts/app.blade.php   Layout : polices, Tailwind (CDN), palette
 resources/views/partials/header.blade.php  Header : logo, navigation, sous-menu, CTA
 resources/views/partials/hero.blade.php    Bannière hero
+resources/views/partials/competences-bar.blade.php  Bandeau des compétences (coupe en biais)
+resources/views/partials/a-propos.blade.php         Section « Votre cabinet d'avocate »
+resources/views/partials/droit-affaires.blade.php   Section « Qu'est-ce que le droit des affaires ? »
+resources/views/components/icon.blade.php           Pictogrammes SVG (<x-icon name="…" />)
 resources/views/home.blade.php          Page d'accueil
 public/css/site.css                     Compléments CSS (états ouverts du menu)
 public/js/main.js                       Menu mobile + sous-menu « Compétences »
@@ -63,6 +67,8 @@ retombent sur les placeholders SVG tant que la photo n'est pas fournie
 | `public/images/hero-bg.jpg`      | Photo de fond de la bannière  | JPG/WebP ≥ 1920×1080, paysage          |
 | `public/images/avocate.png`      | Portrait **détouré**          | PNG/WebP transparent, ~1200 px de haut |
 | `public/images/avocate.jpg`      | Portrait **avec son décor**   | JPG/WebP, cadrage portrait 3/4         |
+| `public/images/a-propos.jpg`     | Photo de la section « cabinet » | JPG/WebP, cadrage carré              |
+| `public/images/droit-affaires.jpg` | Illustration « droit des affaires » | JPG/WebP, format 4/3           |
 
 Le portrait a deux traitements automatiques :
 
@@ -89,6 +95,12 @@ Le nom, les initiales du logo, le titre et l'accroche sont regroupés dans
 'accroche'  => 'Cabinet physique et digitalisé dans toute la France',
 ```
 
+Le tableau `competences` du même fichier alimente **à la fois** le sous-menu
+« Compétences » du header et le bandeau sous la bannière : une entrée ajoutée
+apparaît aux deux endroits. La clé `icone` renvoie à un cas du composant
+`<x-icon />` (`resources/views/components/icon.blade.php`), où sont dessinés
+tous les pictogrammes en SVG — aucune police d'icônes à charger.
+
 ## Contenu de la navigation
 
 Les entrées du menu et du sous-menu « Compétences » sont des tableaux PHP en haut de
@@ -97,5 +109,8 @@ Les entrées du menu et du sous-menu « Compétences » sont des tableaux PHP en
 ## Réalisé
 
 - Header fixe : logo, navigation, sous-menu déroulant, bouton « Prendre rendez-vous », menu burger
-- Hero plein écran : image de fond + dégradé, titre, sous-titre, accroche, deux boutons, portrait détouré
+- Hero plein écran : image de fond + dégradé, titre, sous-titre, accroche, deux boutons, portrait
+- Bandeau des compétences coupé en biais, avec pictogrammes SVG
+- Section « Votre cabinet d'avocate en droit des affaires » : photo, présentation, modes de rendez-vous
+- Section « Qu'est-ce que le droit des affaires ? » : présentation, cartes développement / litiges, illustration
 - Responsive (menu burger sous 1024 px) et accessibilité de base (`aria-expanded`, fermeture avec `Échap`)

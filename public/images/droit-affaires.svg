@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Photo provisoire">
+  <rect width="800" height="600" fill="#e7e4de"/>
+  <rect x="60" y="250" width="300" height="200" rx="10" fill="#c8c4bc"/>
+  <g stroke="#8a7a58" stroke-width="8" fill="none" stroke-linecap="round">
+    <path d="M560 160v260"/><path d="M470 200h180"/>
+    <path d="M470 200l-40 90h80z"/><path d="M650 200l-40 90h80z"/>
+    <path d="M500 420h120"/>
+  </g>
+  <text x="400" y="550" font-family="Georgia, serif" font-size="24" fill="#6b6459" text-anchor="middle">droit-affaires.jpg — illustration</text>
+</svg>
