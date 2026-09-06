@@ -24,6 +24,11 @@ resources/views/partials/hero.blade.php    Bannière hero
 resources/views/partials/competences-bar.blade.php  Bandeau des compétences (coupe en biais)
 resources/views/partials/a-propos.blade.php         Section « Votre cabinet d'avocate »
 resources/views/partials/droit-affaires.blade.php   Section « Qu'est-ce que le droit des affaires ? »
+resources/views/partials/expertises.blade.php       Section « Mes compétences » (cartes sombres)
+resources/views/partials/pourquoi.blade.php         Bandeau « Pourquoi choisir … ? »
+resources/views/partials/accompagnements.blade.php  Carrousel des accompagnements
+resources/views/partials/cabinet-digital.blade.php  Section « Cabinet digitalisé et en présentiel »
+resources/views/partials/faq.blade.php              Questions fréquentes (accordéon <details>)
 resources/views/components/icon.blade.php           Pictogrammes SVG (<x-icon name="…" />)
 resources/views/home.blade.php          Page d'accueil
 public/css/site.css                     Compléments CSS (états ouverts du menu)
@@ -69,6 +74,8 @@ retombent sur les placeholders SVG tant que la photo n'est pas fournie
 | `public/images/avocate.jpg`      | Portrait **avec son décor**   | JPG/WebP, cadrage portrait 3/4         |
 | `public/images/a-propos.jpg`     | Photo de la section « cabinet » | JPG/WebP, cadrage carré              |
 | `public/images/droit-affaires.jpg` | Illustration « droit des affaires » | JPG/WebP, format 4/3           |
+| `public/images/competences.jpg`  | Photo de la section « Mes compétences » | JPG/WebP, cadrage carré     |
+| `public/images/cabinet-digital.png` | Mockup du site sur ordinateur | PNG/WebP transparent, paysage   |
 
 Le portrait a deux traitements automatiques :
 
@@ -95,6 +102,12 @@ Le nom, les initiales du logo, le titre et l'accroche sont regroupés dans
 'accroche'  => 'Cabinet physique et digitalisé dans toute la France',
 ```
 
+Le même fichier porte tout le contenu éditorial de la page d'accueil :
+`expertises` (sous-menu du header **et** cartes « Mes compétences »),
+`atouts` (« Pourquoi choisir … ? »), `accompagnements` (carrousel),
+`avantages_digital` et `faq`. Ajouter une entrée à l'un de ces tableaux suffit
+à la faire apparaître sur la page.
+
 Le tableau `competences` du même fichier alimente **à la fois** le sous-menu
 « Compétences » du header et le bandeau sous la bannière : une entrée ajoutée
 apparaît aux deux endroits. La clé `icone` renvoie à un cas du composant
@@ -113,4 +126,9 @@ Les entrées du menu et du sous-menu « Compétences » sont des tableaux PHP en
 - Bandeau des compétences coupé en biais, avec pictogrammes SVG
 - Section « Votre cabinet d'avocate en droit des affaires » : photo, présentation, modes de rendez-vous
 - Section « Qu'est-ce que le droit des affaires ? » : présentation, cartes développement / litiges, illustration
+- Section « Mes compétences » : cinq domaines dont la succession, en cartes sombres sur photo
+- Bandeau « Pourquoi choisir … ? » coupé en biais : sécurité, transparence, réactivité, couverture
+- Carrousel « Mes différents accompagnements » (défilement tactile + flèches)
+- Section « Cabinet digitalisé et en présentiel » : mockup, avantages et bouton
+- Questions fréquentes en accordéon `<details>` natif, la première ouverte
 - Responsive (menu burger sous 1024 px) et accessibilité de base (`aria-expanded`, fermeture avec `Échap`)

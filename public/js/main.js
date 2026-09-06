@@ -71,3 +71,40 @@
         }
     });
 })();
+
+/* Carrousel des accompagnements : défilement par « page » de cartes visibles */
+(function () {
+    document.querySelectorAll('[data-carousel]').forEach(function (carousel) {
+        var track = carousel.querySelector('[data-carousel-track]');
+        var prev = carousel.querySelector('[data-carousel-prev]');
+        var next = carousel.querySelector('[data-carousel-next]');
+
+        if (!track) return;
+
+        function step() {
+            var card = track.firstElementChild;
+            if (!card) return track.clientWidth;
+
+            var styles = window.getComputedStyle(track);
+            var gap = parseFloat(styles.columnGap || styles.gap) || 0;
+
+            return card.getBoundingClientRect().width + gap;
+        }
+
+        function refresh() {
+            var maxScroll = track.scrollWidth - track.clientWidth - 1;
+            if (prev) prev.disabled = track.scrollLeft <= 0;
+            if (next) next.disabled = track.scrollLeft >= maxScroll;
+            [prev, next].forEach(function (button) {
+                if (button) button.classList.toggle('opacity-30', button.disabled);
+            });
+        }
+
+        if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+        if (next) next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+
+        track.addEventListener('scroll', refresh, { passive: true });
+        window.addEventListener('resize', refresh);
+        refresh();
+    });
+})();

@@ -7,4 +7,9 @@
     @include('partials.competences-bar')
     @include('partials.a-propos')
     @include('partials.droit-affaires')
+    @include('partials.expertises')
+    @include('partials.pourquoi')
+    @include('partials.accompagnements')
+    @include('partials.cabinet-digital')
+    @include('partials.faq')
 @endsection

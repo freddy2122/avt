@@ -6,8 +6,11 @@
         ['label' => 'Contact',    'url' => '#contact'],
     ];
 
-    // Le sous-menu reprend les compétences déclarées dans config/cabinet.php
-    $competences = config('cabinet.competences');
+    // Le sous-menu reprend les domaines d'expertise déclarés dans config/cabinet.php
+    $competences = array_map(
+        fn (array $expertise) => ['label' => $expertise['titre'], 'url' => $expertise['url']],
+        config('cabinet.expertises'),
+    );
 @endphp
 
 <header id="header" class="fixed inset-x-0 top-0 z-50 bg-brown">

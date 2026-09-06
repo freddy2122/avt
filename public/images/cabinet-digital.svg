@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Illustration provisoire">
+  <g>
+    <path d="M180 120h440v300H180z" fill="#3f2a2a"/>
+    <path d="M195 135h410v270H195z" fill="#6b7a86"/>
+    <rect x="195" y="135" width="410" height="46" fill="#3f2a2a"/>
+    <rect x="230" y="230" width="200" height="20" rx="6" fill="#ffffff" opacity=".9"/>
+    <rect x="230" y="266" width="150" height="14" rx="6" fill="#eee0bd"/>
+    <rect x="230" y="300" width="110" height="26" rx="4" fill="#eee0bd"/>
+    <path d="M120 420h560l40 40H80z" fill="#c8ccd0"/>
+    <rect x="330" y="432" width="140" height="10" rx="5" fill="#9aa1a7"/>
+  </g>
+  <text x="400" y="540" font-family="Georgia, serif" font-size="24" fill="#6b6459" text-anchor="middle">cabinet-digital.png — mockup du site</text>
+</svg>

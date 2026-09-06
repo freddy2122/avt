@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Photo provisoire">
+  <rect width="800" height="800" fill="#a98155"/>
+  <rect y="470" width="800" height="330" fill="#8a6435"/>
+  <g fill="#2e2723">
+    <rect x="180" y="520" width="240" height="60" rx="14"/>
+    <rect x="285" y="575" width="30" height="120" rx="10"/>
+    <rect x="230" y="690" width="140" height="34" rx="12"/>
+  </g>
+  <rect x="470" y="380" width="270" height="180" rx="10" fill="#d6d3cd"/>
+  <text x="400" y="770" font-family="Georgia, serif" font-size="24" fill="#fff" opacity=".8" text-anchor="middle">competences.jpg — marteau et bureau</text>
+</svg>
