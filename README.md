@@ -31,6 +31,7 @@ resources/views/partials/cabinet-digital.blade.php  Section « Cabinet digitalis
 resources/views/partials/avis.blade.php             Avis clients (carrousel Google)
 resources/views/partials/faq.blade.php              Questions fréquentes (accordéon <details>)
 resources/views/partials/rendez-vous.blade.php      Prise de rendez-vous et coordonnées
+resources/views/partials/footer.blade.php           Pied de page (inclus dans le layout)
 resources/views/components/icon.blade.php           Pictogrammes SVG (<x-icon name="…" />)
 resources/views/home.blade.php          Page d'accueil
 public/css/site.css                     Compléments CSS (états ouverts du menu)
@@ -148,4 +149,5 @@ Les entrées du menu et du sous-menu « Compétences » sont des tableaux PHP en
 - Questions fréquentes en accordéon `<details>` natif, la première ouverte
 - Section « Retour d'expérience de mes clients » : fiche du cabinet et carrousel d'avis Google
 - Section « Prendre rendez-vous » : horaires, bouton de réservation et bloc de coordonnées
+- Pied de page : identité, navigation, coordonnées, bouton de réservation et mentions légales
 - Responsive (menu burger sous 1024 px) et accessibilité de base (`aria-expanded`, fermeture avec `Échap`)
