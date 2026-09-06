@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maître David Audebert — Avocat en droit des affaires à Paris</title>
+  <meta name="description" content="Maître David Audebert, avocat en droit des affaires à Paris. Cabinet physique et digitalisé dans toute la France." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+
+      <!-- Logo -->
+      <a class="logo" href="/" aria-label="Accueil — David Audebert Avocat">
+        <span class="logo__initials">DA</span>
+        <span class="logo__rule" aria-hidden="true"></span>
+        <span class="logo__word">Avocat</span>
+      </a>
+
+      <!-- Navigation -->
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <ul class="nav__list">
+          <li class="nav__item nav__item--has-sub">
+            <button class="nav__link nav__toggle" type="button" aria-expanded="false" aria-controls="submenu-competences">
+              Compétences
+              <svg class="nav__caret" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <ul class="submenu" id="submenu-competences">
+              <li><a href="#">Droit des sociétés</a></li>
+              <li><a href="#">Droit commercial</a></li>
+              <li><a href="#">Contrats d'affaires</a></li>
+              <li><a href="#">Contentieux des affaires</a></li>
+              <li><a href="#">Droit du travail</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="#honoraires">Honoraires</a></li>
+          <li class="nav__item"><a class="nav__link" href="#a-propos">À propos</a></li>
+          <li class="nav__item"><a class="nav__link" href="#blog">Blog</a></li>
+          <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+
+        <a class="btn btn--cream header__cta header__cta--mobile" href="#rendez-vous">Prendre rendez-vous</a>
+      </nav>
+
+      <a class="btn btn--cream header__cta" href="#rendez-vous">Prendre rendez-vous</a>
+
+      <!-- Burger (mobile) -->
+      <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__media">
+      <!-- Remplacer par la photo du cabinet / palais de justice -->
+      <img src="assets/img/hero-bg.svg" alt="" aria-hidden="true" class="hero__bg" />
+      <span class="hero__overlay" aria-hidden="true"></span>
+    </div>
+
+    <div class="hero__inner">
+      <div class="hero__content">
+        <h1 class="hero__title">Maître David Audebert</h1>
+        <p class="hero__subtitle">Avocat en droit des affaires à Paris</p>
+        <p class="hero__kicker">Cabinet physique et digitalisé dans toute la France</p>
+
+        <div class="hero__actions">
+          <a class="btn btn--cream btn--lg" href="#rendez-vous">Prendre rendez-vous</a>
+          <a class="btn btn--brown btn--lg" href="#competences">Mes compétences</a>
+        </div>
+      </div>
+
+      <!-- Portrait détouré -->
+      <figure class="hero__portrait">
+        <img src="assets/img/portrait.svg" alt="Portrait de Maître David Audebert" />
+      </figure>
+    </div>
+  </section>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

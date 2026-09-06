@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 900" width="640" height="900" role="img" aria-label="Portrait provisoire">
+  <defs>
+    <linearGradient id="suit" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2f4d86"/>
+      <stop offset="100%" stop-color="#1d3157"/>
+    </linearGradient>
+  </defs>
+  <!-- Épaules / veste -->
+  <path d="M120 900 C120 640 210 560 320 545 C430 560 520 640 520 900 Z" fill="url(#suit)"/>
+  <!-- Chemise -->
+  <path d="M268 552 L320 700 L372 552 L340 536 L300 536 Z" fill="#f2f5f9"/>
+  <!-- Cravate -->
+  <path d="M320 560 L338 592 L320 700 L302 592 Z" fill="#3f6fb5"/>
+  <!-- Cou -->
+  <path d="M282 470 h76 v80 l-38 24 l-38 -24 Z" fill="#e0b596"/>
+  <!-- Visage -->
+  <ellipse cx="320" cy="360" rx="112" ry="136" fill="#eec5a4"/>
+  <!-- Cheveux -->
+  <path d="M208 342 C214 236 258 190 320 190 C382 190 426 236 432 342 C404 300 372 276 320 276 C268 276 236 300 208 342 Z" fill="#8a6236"/>
+  <text x="320" y="860" font-family="Georgia, serif" font-size="22" fill="#ffffff" opacity=".7" text-anchor="middle">
+    portrait.svg — à remplacer (PNG détouré)
+  </text>
+</svg>
