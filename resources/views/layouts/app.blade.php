@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title', config('app.name'))</title>
-    <meta name="description" content="@yield('description', 'Maître David Audebert, avocat en droit des affaires à Paris. Cabinet physique et digitalisé dans toute la France.')">
+    <meta name="description" content="@yield('description', config('cabinet.meta_description'))">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

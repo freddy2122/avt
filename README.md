@@ -1,4 +1,4 @@
-# Site vitrine — Maître David Audebert, Avocat
+# Site vitrine — Maître Daniela DIDONNO, Avocate
 
 Application **Laravel** + **Tailwind CSS via CDN**.
 Aucun `node_modules`, aucun `npm install`, aucune étape de build : seul Composer est nécessaire.
@@ -70,11 +70,24 @@ Le portrait a deux traitements automatiques :
 - **`avocate.jpg` / `.webp`** (photo de studio avec son décor) → présenté dans un
   cadre arrondi en arche, bordé de crème : élégant sans nécessiter de détourage.
 
-Le logo « DA / AVOCAT » est composé en HTML (texte), aucune image n'est nécessaire.
+Le logo « DD / AVOCATE » est composé en HTML (texte), aucune image n'est nécessaire.
 
 > **Droits d'utilisation** : une URL de prévisualisation iStock (`media.istockphoto.com`,
 > paramètre `s=612x612`) est une image de comparaison filigranée, réservée à la maquette.
 > Pour la mise en ligne, téléchargez le fichier haute définition depuis la licence achetée.
+
+## Identité du cabinet
+
+Le nom, les initiales du logo, le titre et l'accroche sont regroupés dans
+`config/cabinet.php` — un seul fichier à modifier, aucune vue à toucher :
+
+```php
+'nom'       => 'Maître Daniela DIDONNO',
+'initiales' => 'DD',
+'mention'   => 'Avocate',
+'titre'     => 'Avocate en droit des affaires à Paris',
+'accroche'  => 'Cabinet physique et digitalisé dans toute la France',
+```
 
 ## Contenu de la navigation
 

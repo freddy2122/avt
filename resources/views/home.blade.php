@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Maître David Audebert — Avocat en droit des affaires à Paris')
+@section('title', config('cabinet.nom').' — '.config('cabinet.titre'))
 
 @section('content')
     @include('partials.hero')

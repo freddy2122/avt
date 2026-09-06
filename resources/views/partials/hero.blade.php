@@ -11,7 +11,8 @@
      |  - avocate.jpg / .webp → photo avec son décor, présentée dans un cadre
      |                   arrondi pour rester élégante sans détourage.
      */
-    $portraitIsCutOut = is_file(public_path('images/avocate.png'));
+    // Le placeholder SVG est lui aussi détouré : pas de cadre tant qu'aucune photo n'est fournie.
+    $portraitIsCutOut = is_file(public_path('images/avocate.png')) || ! SiteImage::exists('avocate');
     $portrait = SiteImage::url('avocate', 'portrait.svg');
 @endphp
 
@@ -27,15 +28,15 @@
 
         <div class="max-w-[900px] flex-1 pb-5 lg:pb-10">
             <h1 class="mb-6 font-title text-[clamp(42px,6.2vw,92px)] font-medium leading-[1.05] text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.35)] lg:mb-8">
-                Maître David Audebert
+                {{ config('cabinet.nom') }}
             </h1>
 
             <p class="mb-4 text-[clamp(26px,3.6vw,54px)] font-normal leading-tight text-cream">
-                Avocat en droit des affaires à Paris
+                {{ config('cabinet.titre') }}
             </p>
 
             <p class="mb-8 text-[clamp(14px,1.4vw,21px)] font-light uppercase tracking-[0.08em] text-white/90 lg:mb-11">
-                Cabinet physique et digitalisé dans toute la France
+                {{ config('cabinet.accroche') }}
             </p>
 
             <div class="flex flex-wrap gap-4">
@@ -54,12 +55,12 @@
         <figure class="m-0 w-[min(360px,78%)] shrink-0 self-center lg:w-[clamp(280px,32vw,520px)] lg:self-end">
             @if ($portraitIsCutOut)
                 <img src="{{ $portrait }}"
-                     alt="Portrait de l'avocat"
+                     alt="Portrait de {{ config('cabinet.nom') }}"
                      class="h-auto w-full drop-shadow-[0_24px_46px_rgba(0,0,0,0.35)]">
             @else
                 <div class="overflow-hidden rounded-t-[999px] rounded-b-sm border-4 border-cream/25 shadow-[0_24px_46px_rgba(0,0,0,0.4)]">
                     <img src="{{ $portrait }}"
-                         alt="Portrait de l'avocat"
+                         alt="Portrait de {{ config('cabinet.nom') }}"
                          class="aspect-[3/4] h-auto w-full object-cover object-top">
                 </div>
             @endif

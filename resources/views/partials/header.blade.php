@@ -19,10 +19,10 @@
     <div class="mx-auto flex min-h-[76px] max-w-[1400px] items-center gap-8 px-6 lg:min-h-[92px] lg:px-10">
 
         {{-- Logo --}}
-        <a href="{{ url('/') }}" class="mr-auto flex flex-col items-center gap-1 text-white" aria-label="Accueil — David Audebert Avocat">
-            <span class="font-title text-[28px] font-semibold leading-none tracking-wide lg:text-[34px]">DA</span>
+        <a href="{{ url('/') }}" class="mr-auto flex flex-col items-center gap-1 text-white" aria-label="Accueil — {{ config('cabinet.nom') }}">
+            <span class="font-title text-[28px] font-semibold leading-none tracking-wide lg:text-[34px]">{{ config('cabinet.initiales') }}</span>
             <span class="h-px w-full bg-current" aria-hidden="true"></span>
-            <span class="font-title text-[11px] uppercase leading-none tracking-[0.22em] lg:text-xs">Avocat</span>
+            <span class="font-title text-[11px] uppercase leading-none tracking-[0.22em] lg:text-xs">{{ config('cabinet.mention') }}</span>
         </a>
 
         {{-- Navigation --}}
